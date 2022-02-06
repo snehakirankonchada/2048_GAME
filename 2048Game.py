@@ -1,4 +1,4 @@
-#global variables
+#The code starts from here 
 
 #It is used to define the size of the box, it contains size*size grid boxes
 size = 4
@@ -157,11 +157,13 @@ def moveDown(grid):
 
 #So after making every move , the winGame() function will be called and checks if we got 2048 or not. 
 def winGame(grid):
+    index=0 
     for i in range(size):
         for j in range(size):
-            if grid[i][j]==2048:
+            if grid[index]==2048:
                 print("Game Won")
                 return True 
+            index+=
                 
     return False
 
@@ -189,13 +191,11 @@ def makeMove(grid):
 grid = startGame()
 print("This is the start of the game")
 print("")
-instructions()
-
 
 printGrid(grid)
 count = 0
 while(endGame(grid) == False):
-     print("Type '1' for left\n  '2' for right\n  '3' for up\n  '4' for down")
+    print("Type '1' for left\n  '2' for right\n  '3' for up\n  '4' for down")
     inp = input("What is your move?")
     print("")
     if inp == "1":
